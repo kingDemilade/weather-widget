@@ -142,8 +142,7 @@ try {
           <p>{weather.weather[0].description}</p>
           <p>
             {useFahrenheit
-              ? `${weather.main.temp}°F`
-              : `${(weather.main.temp * 9/5 + 32).toFixed(1)}°F`}
+            `${(weather.main.temp * 9/5 + 32).toFixed(1)}°F`}
           </p>
           <img
             src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
