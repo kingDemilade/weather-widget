@@ -87,15 +87,13 @@ try {
   return (
     <div className="App">
       <h1>Weather Widget</h1>
-  <form className="weather-form" onSubmit={handleSearch}>
-  <input
-    type="text"
-    placeholder="Enter city name"
-    value={city}
-    onChange={(e) => setCity(e.target.value)}
-  />
-  <button type="submit">Search</button>
-</form>
+      <input
+        type="text"
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
+        placeholder="Enter city name"
+      />
+      <button onClick={getWeather}>Get Weather</button>
       <button onClick={() => setUseCelsius(!useCelsius)}>
         Switch to {useCelsius ? 'Fahrenheit' : 'Celsius'}
       </button>
