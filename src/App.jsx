@@ -8,10 +8,7 @@ function App() {
   const [useCelsius, setUseCelsius] = useState(true);
   const [history, setHistory] = useState([]);
   const mounted = useRef(false);
-  const handleSearch = (e) => {
-  e.preventDefault();
-  // your search logic here
-};
+
 
 
   const getWeather = async () => {
@@ -87,6 +84,11 @@ try {
     }
   }
 }, []);
+
+  const handleSearch = (e) => {
+  e.preventDefault();
+  // your search logic here
+};
 
   return (
     <div className="App">
