@@ -102,7 +102,7 @@ try {
       <button type="submit">Search</button>
       </form>
       {/* rest of your content */}
-      <button onClick={() => setUseCelsius(!useCelsius)}>
+      <button className="weather-form" onClick={() => setUseCelsius(!useCelsius)}>
         Switch to {useCelsius ? 'Fahrenheit' : 'Celsius'}
       </button>
       
