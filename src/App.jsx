@@ -8,6 +8,10 @@ function App() {
   const [useCelsius, setUseCelsius] = useState(true);
   const [history, setHistory] = useState([]);
   const mounted = useRef(false);
+  const handleSearch = (e) => {
+  e.preventDefault();
+  // your search logic here
+};
 
 
   const getWeather = async () => {
@@ -86,14 +90,16 @@ try {
 
   return (
     <div className="App">
-      <h1>Weather Widget</h1>
+    <form className="weather-form" onSubmit={handleSearch}>
       <input
         type="text"
         value={city}
         onChange={(e) => setCity(e.target.value)}
         placeholder="Enter city name"
       />
-      <button onClick={getWeather}>Get Weather</button>
+      <button type="submit">Search</button>
+      </form>
+      {/* rest of your content */}
       <button onClick={() => setUseCelsius(!useCelsius)}>
         Switch to {useCelsius ? 'Fahrenheit' : 'Celsius'}
       </button>
