@@ -87,7 +87,7 @@ try {
 
   const handleSearch = (e) => {
   e.preventDefault();
-  // your search logic here
+  getWeather(); // ← run the search
 };
 
   return (
