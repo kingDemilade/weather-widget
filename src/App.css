@@ -1,11 +1,3 @@
-body {
-  margin: 0;
-  display: block;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 .App {
   text-align: center;
   padding: 40px;
@@ -42,4 +34,42 @@ button {
 .error {
   color: red;
   margin-top: 15px;
+}
+
+/* === Form Section === */
+.weather-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+
+.weather-form input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 250px;
+  transition: border-color 0.3s ease;
+}
+
+.weather-form input:focus {
+  outline: none;
+  border-color: #0077ff;
+}
+
+.weather-form button {
+  padding: 0.75rem 1.2rem;
+  background-color: #0077ff;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.weather-form button:hover {
+  background-color: #005fcc;
 }
