@@ -66,12 +66,13 @@ button {
   background-color: #005fcc;
 }
 
-.weather {
+.weather {    
   margin-top: 20px;
-  background-color: #ffffffcc; /* soft white with slight transparency */
-  border-radius: 12px;
+  background-color: #292929;
   padding: 20px;
-  text-align: center;
+  border-radius: 10px;
+  display: block;
+  border: solid 2px #0077cc;
   max-width: 350px;
   margin-left: auto;
   margin-right: auto;
