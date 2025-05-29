@@ -145,11 +145,6 @@ function App() {
       {weather?.error && <p className="error">{weather.error}</p>}
     </div>
   );
-
-<video className="bg-video" autoPlay loop muted>
-  <source src="/sun-bg.mp4" type="video/mp4" />
-</video>
-
 }
 
 export default App;
