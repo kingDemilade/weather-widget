@@ -83,13 +83,13 @@ button {
 
 .weather h2 {
   margin-bottom: 10px;
-  font-size: 1.5rem;
+  font-size: 3rem;
 }
 
 .weather p {
   margin: 5px 0;
   font-size: 1.2rem;
-  color: #333;
+  color: #dddddd;
 }
 
 .weather img {
