@@ -5,7 +5,7 @@ function App() {
   const [city, setCity] = useState('');
   const [loading, setLoading] = useState(false);
   const [weather, setWeather] = useState(null);
-  const [useCelsius, setUseCelsius] = useState(true);
+  const [useFahrenheit, setUseFahrenheit] = useState(true);
   const [history, setHistory] = useState([]);
   const mounted = useRef(false);
 
@@ -102,9 +102,9 @@ try {
       <button type="submit">Search</button>
       </form>
       {/* rest of your content */}
-      <button className="weather-form" onClick={() => setUseCelsius(!useCelsius)}>
+     {/* <button className="weather-form" onClick={() => setUseCelsius(!useCelsius)}>
         Switch to {useCelsius ? 'Fahrenheit' : 'Celsius'}
-      </button>
+      </button> */}
       
 {history.length > 0 && (
   <div style={{ marginTop: '20px' }}>
@@ -141,8 +141,8 @@ try {
           <h2>{weather.name}, {weather.sys.country}</h2>
           <p>{weather.weather[0].description}</p>
           <p>
-            {useCelsius
-              ? `${weather.main.temp}°C`
+            {useFahrenheit
+              ? `${weather.main.temp}°F`
               : `${(weather.main.temp * 9/5 + 32).toFixed(1)}°F`}
           </p>
           <img
