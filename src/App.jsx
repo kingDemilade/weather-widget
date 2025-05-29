@@ -5,7 +5,7 @@ function App() {
   const [city, setCity] = useState('');
   const [loading, setLoading] = useState(false);
   const [weather, setWeather] = useState(null);
-  const [useFahrenheit, setUseFahrenheit] = useState(true);
+  const [useCelsius, setUseCelsius] = useState(true);
   const [history, setHistory] = useState([]);
   const mounted = useRef(false);
 
@@ -141,7 +141,7 @@ try {
           <h2>{weather.name}, {weather.sys.country}</h2>
           <p>{weather.weather[0].description}</p>
           <p>
-            {useFahrenheit
+            {useCelsius
             `${(weather.main.temp * 9/5 + 32).toFixed(1)}°F`}
           </p>
           <img
