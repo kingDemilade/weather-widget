@@ -129,11 +129,11 @@ function App() {
       {weather && !weather.error && (
         <div className="weather">
           <h2>
-            {weather.name}, {weather.sys.country}
+            {(weather.main.temp * 9 / 5 + 32).toFixed(1)}°F
           </h2>
           <p>{weather.weather[0].description}</p>
           <p>
-            {(weather.main.temp * 9 / 5 + 32).toFixed(1)}°F
+            {weather.name}, {weather.sys.country}
           </p>
           <img
             src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
