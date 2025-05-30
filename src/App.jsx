@@ -128,9 +128,9 @@ function App() {
 
       {weather && !weather.error && (
         <div className="weather">
-          <video className="weather-video" autoPlay loop muted playsInline>
-        <source src="/sun-bg.mp4" type="video/mp4" />
-          </video>  
+        <video className="weather-video" autoPlay loop muted playsInline>
+      <source src={`${import.meta.env.BASE_URL}sun-bg.mp4`} type="video/mp4" />
+        </video>  
           <p>
             {weather.name}, {weather.sys.country}
           </p>
