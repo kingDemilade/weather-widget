@@ -84,29 +84,19 @@ button {
   z-index: -2;
 }
 
-.weather {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.weather video.weather-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.25;
-  pointer-events: none;
-}
-
-.weather h2,
-.weather p,
-.weather img {
-  position: relative;
-  z-index: 1;
+.weather {    
+  margin-top: 20px;
+  background-color: #292929;
+  padding: 20px;
+  border-radius: 10px;
+  display: block;
+  border: solid 2px #0077cc;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .weather h2 {
