@@ -127,24 +127,22 @@ function App() {
       {loading && <p>Fetching weather...</p>}
 
       {weather && !weather.error && (
-<div className="weather">
-  <video className="weather-video" autoPlay loop muted playsInline>
-    <source src="/sun-bg.mp4" type="video/mp4" />
-  </video>
-
-  {/* Existing weather content */}
-  {weather && weather.main && (
-    <>
-      <h2>{weather.name}</h2>
-      <p>{weather.weather[0].description}</p>
-      <p>{Math.round(weather.main.temp)}°</p>
-      <img
-        src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-        alt="weather icon"
-      />
-    </>
-  )}
-</div>
+        <div className="weather">
+          <video className="weather-video" autoPlay loop muted>
+        <source src="/sun-bg.mp4" type="video/mp4" />
+          </video>  
+          <p>
+            {weather.name}, {weather.sys.country}
+          </p>
+          <h2>
+            {Math.round(weather.main.temp * 9 / 5 + 32).toFixed(1)}°F
+          </h2>
+          <p>{weather.weather[0].description}</p>
+          <img
+            src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+            alt="Weather Icon"
+          />
+        </div>
       )}
 
       {weather?.error && <p className="error">{weather.error}</p>}
