@@ -128,15 +128,17 @@ function App() {
 
       {weather && !weather.error && (
         <div className="weather">
-          <video className="weather-video" autoPlay loop muted>
-        <source src="/sun-bg.mp4" type="video/mp4" />
-          </video>  
-          <p>
-            {weather.name}, {weather.sys.country}
-          </p>
+          <div className="clouds">
+            <div className="cloud cloud-1"></div>
+            <div className="cloud cloud-2"></div>
+            <div className="cloud cloud-3"></div>
+          </div>
           <h2>
             {Math.round(weather.main.temp * 9 / 5 + 32).toFixed(1)}°F
           </h2>
+          <p>
+            {weather.name}, {weather.sys.country}
+          </p>
           <p>{weather.weather[0].description}</p>
           <img
             src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
@@ -148,7 +150,6 @@ function App() {
       {weather?.error && <p className="error">{weather.error}</p>}
     </div>
   );
-  
 }
 
 export default App;

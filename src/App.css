@@ -66,25 +66,23 @@ button {
   background-color: #005fcc;
 }
 
-.weather::before {
-  content: '';
+/* === Fullscreen Animated Background Video === */
+/* 
+.weather-video {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: -1;
-  background: black;
-}
-
-.weather video.bg-video {
-  position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -2;
+  z-index: -1;
+  opacity: 0.25;
+  pointer-events: none;
 }
+*/
 
-.weather {    
+/* === Weather Card === */
+.weather {
   margin-top: 20px;
   background-color: #292929;
   padding: 20px;
@@ -97,6 +95,8 @@ button {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
 .weather h2 {
@@ -114,4 +114,28 @@ button {
   margin-top: 10px;
   width: 100px;
   height: 100px;
+}
+
+/* === Scoped Cloud Animation in Weather Card === */
+.weather::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: -100px;
+  width: 200px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: cloudMove 25s linear infinite;
+  z-index: 0;
+  filter: blur(20px);
+}
+
+@keyframes cloudMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(500px);
+  }
 }
