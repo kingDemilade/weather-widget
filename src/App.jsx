@@ -83,6 +83,10 @@ function App() {
     getWeather();
   };
 
+<video className="bg-video" autoPlay loop muted>
+  <source src="/sun-bg.mp4" type="video/mp4" />
+</video>
+
   return (
     <div className="App">
       <form className="weather-form" onSubmit={handleSearch}>
@@ -145,6 +149,7 @@ function App() {
       {weather?.error && <p className="error">{weather.error}</p>}
     </div>
   );
+  
 }
 
 export default App;
