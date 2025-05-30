@@ -128,7 +128,7 @@ function App() {
 
       {weather && !weather.error && (
         <div className="weather">
-          <video className="weather-video" autoPlay loop muted>
+          <video className="weather-video" autoPlay loop muted playsInline>
         <source src="/sun-bg.mp4" type="video/mp4" />
           </video>  
           <p>
