@@ -133,7 +133,7 @@ button {
 
 @keyframes cloudMove {
   0% {
-    transform: translateX(-500);
+    transform: translateX(-500px);
   }
   100% {
     transform: translateX(500px);
